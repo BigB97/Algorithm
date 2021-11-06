@@ -2,14 +2,17 @@
 
 function minMax(str) {
   let obj = {};
-  for (key of str.replace(/ +/g, '')) {
+  for (let key of str.replace(/ +/g, ''))
     !obj[key] ? (obj[key] = 1) : obj[key]++;
-  }
   let maxNumber = 0;
-  let word = [];
-  for (key in obj) obj[key] >= maxNumber ? (maxNumber = obj[key]) : 0;
-  for (key in obj) if (obj[key] == maxNumber) word.push(key);
-  return `${maxNumber} ${word}`;
+  let letter = '';
+  for (let num in obj)
+    if (obj[num] >= maxNumber) {
+      maxNumber = obj[num];
+      letter = num;
+    }
+  console.log(obj);
+  return `maxNumber: ${maxNumber} letter: ${letter} `;
 }
 
 console.log(

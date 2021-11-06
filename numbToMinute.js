@@ -4,4 +4,4 @@ function numbToMinute(num) {
   return `${hour}hr : ${min}min`;
 }
 
-console.log(numbToMinute(60));
+console.log(numbToMinute(693));
